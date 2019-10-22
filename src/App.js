@@ -13,7 +13,7 @@ const App = () => {
   const double = () => setCount(previousCount => previousCount * 2)
   
   const division = () => setCount(previousCount => 
-    // {return ... } 無くても可 参考演算子 返り値 関数が３の倍数(% 3)であれば３で割り(/ 3) : 違うければそのまま
+    // {return ... } 無くても可 三項演算子 返り値 関数が３の倍数(% 3)であれば３で割り(/ 3) : 違うければそのまま
       previousCount % 3 === 0 ? previousCount / 3 : previousCount    
     // if(previousCount % 3 === 0){
     //   return previousCount / 3 
