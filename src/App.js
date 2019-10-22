@@ -3,13 +3,13 @@ import React, { useState } from 'react'
 const App = () => {
   // カウントを操作する関数 ex[price, setPrice]
   const [count, setCount] = useState(0)
-  console.log({count})
-  console.log({setCount})
-  console.log(typeof setCount)
+
+  const increment = () => setCount(count + 1)
   return (
-    <div>
-      This is Template
-    </div>
+    <>
+      <div>count: { count }</div>
+      <button onClick={increment}> +1 </button>
+    </>
   )
 }
 export default App
