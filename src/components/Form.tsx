@@ -2,8 +2,11 @@ import React from "react";
 
 export const Form = () => {
   return (
-    <>
-      <h2>Form</h2>
+    <>    
+      <form>
+        <input type="text" name="city" placeholder="都市名" />
+        <button>Get Weather</button>
+      </form>
     </>
   );
 };

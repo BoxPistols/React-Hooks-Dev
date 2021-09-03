@@ -1,12 +1,18 @@
 import React from "react";
+import { Row } from "./components/Milligram/Row";
 import { Title } from "./components/Title";
 import { Form } from "./components/Form";
+
 
 const App = () => {
   return (
     <React.Fragment>
-      <Title />
-      <Form />
+      <div style={{  padding:40 }}>
+        <Row>
+          <Title />
+          <Form />
+        </Row>
+      </div>
     </React.Fragment>
   );
 };
