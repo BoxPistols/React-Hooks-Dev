@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Form = () => {
+export const Form = (props:any) => {
   const [city, setCity] = useState<string>("");
 
   const url =
@@ -14,17 +14,25 @@ export const Form = () => {
 
   return (
     <>
+    <h3>{city}</h3>
       <form>
         <input
           type="text"
           name="city"
           placeholder="都市名"
-          onChange={e => setCity(e.target.value)}
+          onChange={e => props.setCity(e.target.value)}
         />
-        <button type="submit" onClick={getWeather}>
+        <button type="submit" onClick={props.getWeather}>
           Get Weather
         </button>
       </form>
+      <p></p>
     </>
   );
 };
+
+type FormPropsType ={
+  setCity: React.Dispatch<React.SetStateAction<string>>
+  getWeather: (e: any) => void
+
+}
